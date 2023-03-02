@@ -36,9 +36,9 @@ function listInformation (mnemonic, passphrase) {
 const prefix = "0xfad";
 // Your passphrase 
 const passphrase = '';
-  
+const Num_iteration = 1000000; 
 // const mnemonic = bip39.generateMnemonic()
-for (let i = 0; i < 100000; i++){
+for (let i = 0; i < Num_iteration; i++){
 	const mnemonic = bip39.generateMnemonic()
 	const pubkey = getAddressFromMnemonic(mnemonic, passphrase);
 	if (pubkey.toString('hex').slice(0, prefix.length).toLowerCase() === prefix){
